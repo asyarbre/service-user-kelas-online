@@ -27,6 +27,10 @@ module.exports = (sequelize, DataTypes) => {
         defaultValue: "student",
         allowNull: false,
       },
+      profession: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       avatar: {
         type: DataTypes.STRING,
         allowNull: true,
