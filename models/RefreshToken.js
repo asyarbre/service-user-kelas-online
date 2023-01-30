@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const RefreshToken = sequelize.define(
-    "RefeshToken",
+    "RefreshToken",
     {
       id: {
         type: DataTypes.INTEGER,
