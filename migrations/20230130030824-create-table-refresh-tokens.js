@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable("refresh_token", {
+    await queryInterface.createTable("refresh_tokens", {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -27,9 +27,9 @@ module.exports = {
         allowNull: false,
       },
     });
-    await queryInterface.addConstraint("refresh_token", {
+    await queryInterface.addConstraint("refresh_tokens", {
       type: "foreign key",
-      name: "FK_REFRESH_TOKEN_USER_ID",
+      name: "FK_REFRESH_TOKENS_USER_ID",
       fields: ["user_id"],
       references: {
         table: "users",
@@ -39,6 +39,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('refresh_token');
+    await queryInterface.dropTable('refresh_tokens');
   },
 };
